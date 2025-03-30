@@ -1,0 +1,19 @@
+name: First Workflow
+
+# it is defining what will be the event (ie trigger) that will cause the workflow to activate. workflow_dispatch waits for the user to activate the workflow themselves
+on: workflow_dispatch
+
+# the work that needs to be done
+jobs:
+
+  #not a reserved name ie that "first-job" name could be anything. its user-defined
+  first-job:
+
+  # the runners ie the machine that will run the job (execution environment)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print Goodbye
+        run: echo "Done - bye!"
+      
